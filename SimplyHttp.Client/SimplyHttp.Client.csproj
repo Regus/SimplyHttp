@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;net45;net46;net47</TargetFrameworks>
+		<Authors>Anders Eggers-Krag</Authors>
+		<Company></Company>
+		<Description>Json reader/writer</Description>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<RepositoryUrl>https://github.com/Regus/SimplyHttp</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<Version>1.0.0</Version>
+		<PackageProjectUrl>https://github.com/Regus/SimplyHttp</PackageProjectUrl>
+		<Copyright>Anders Eggers-Krag</Copyright>
+		<PackageLicenseUrl>https://github.com/Regus/SimplyHttp/blob/master/LICENSE</PackageLicenseUrl>
+		<PackageTags>json</PackageTags>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+		<DocumentationFile></DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)'=='net40' OR '$(TargetFramework)'=='net45' OR '$(TargetFramework)'=='net46'">
+		<Reference Include="System" />
+		<Reference Include="System.Core" />
+		<Reference Include="Microsoft.CSharp" />
+		<Reference Include="System.Data" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)'=='net45' OR '$(TargetFramework)'=='net46'">
+		<Reference Include="System.ComponentModel.DataAnnotations" />
+	</ItemGroup>
+
+</Project>
